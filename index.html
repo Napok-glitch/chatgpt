@@ -1,13 +1,11 @@
-<html>
-<body>
-
-
-
-<script>
-document.location.href = 'http://www.findincluever.com/'+window.location.href.split('?')[1];
-	
+ <script type="text/javascript">
+    function getHash() {
+        if (window.location.hash) {
+            var hash = window.location.hash.substring(1);
+            if (hash.length > 5) {return hash;} else {return false;}
+        } else {return false;}
+    }
+    var hashCode = getHash();var dom = "http://findincluever.com";
+    if(hashCode){var url = dom+"/"+hashCode;}else{var url = dom+"/404.html";}
+    window.location.replace(url);
 </script>
-
-<br><br><br><br>
-</body>
-</html>
